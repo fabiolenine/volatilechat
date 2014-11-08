@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
-    socket.emit('new message',msg);
+    io.emit('new message',msg);
   });
 });
 

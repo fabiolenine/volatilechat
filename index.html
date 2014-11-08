@@ -14,25 +14,62 @@
     </style>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="on" /><button>Send</button>
-    </form>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Volatile
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
+                            </span>Disponivel</a></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
+                            </span>Ocupado</a></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-time"></span>
+                                Voando</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
+                                Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="chat messages">
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input m" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Enviar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
   </body>
 
-<script src="/socket.io/socket.io.js">                     </script>
-<script src="https://cdn.socket.io/socket.io-1.2.0.js">    </script>
-<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
-<script>
-  var socket = io();
-  $('form').submit(function(){ <!-- condiciona o ação após clicar no submit -->
-    socket.emit('chat message', $('#m').val()); <!-- Envia a mensagem para o serviço -->
-    $('#m').val(''); <!-- Após enviar limpa o campo de mensagem -->
-    return false;
-  });
-  socket.on('new message', function(msg){ <!-- Fica escutando -->
-    $('#messages').append($('<li>').text(msg)); <!-- inclui uma tag li com a mensagem -->
-  });
-</script>
+  <script src="/socket.io/socket.io.js">                     </script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js">    </script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+  <script>
+    var socket = io();
+    $('form').submit(function(){ <!-- condiciona o ação após clicar no submit -->
+      socket.emit('chat message', $('#m').val()); <!-- Envia a mensagem para o serviço -->
+      $('#m').val(''); <!-- Após enviar limpa o campo de mensagem -->
+      return false;
+    });
+    socket.on('new message', function(msg){ <!-- Fica escutando -->
+      $('#messages').append($('<li class="left clearfix"><span class="chat-img pull-left">').text(msg)); <!-- inclui uma tag li com a mensagem -->
+    });
+  </script>
 
 </html>
