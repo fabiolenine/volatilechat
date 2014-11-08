@@ -41,11 +41,13 @@
                 </div>
                 <div class="panel-footer">
                     <div class="input-group">
+                      <form action="">
                         <input id="btn-input m" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                         <span class="input-group-btn">
                             <button class="btn btn-warning btn-sm" id="btn-chat">
                                 Enviar</button>
                         </span>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -62,12 +64,12 @@
   <script>
     var socket = io();
     $('form').submit(function(){ <!-- condiciona o ação após clicar no submit -->
-      socket.emit('chat message', $('#m').val()); <!-- Envia a mensagem para o serviço -->
-      $('#m').val(''); <!-- Após enviar limpa o campo de mensagem -->
+      socket.emit('chat message', $('#btn-input').val()); <!-- Envia a mensagem para o serviço -->
+      $('#btn-input').val(''); <!-- Após enviar limpa o campo de mensagem -->
       return false;
     });
     socket.on('new message', function(msg){ <!-- Fica escutando -->
-      $('#messages').append($('<li class="left clearfix"><span class="chat-img pull-left">').text(msg)); <!-- inclui uma tag li com a mensagem -->
+      $('#messages').append($('<li class="left clearfix">').text(msg)); <!-- inclui uma tag li com a mensagem -->
     });
   </script>
 
