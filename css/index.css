@@ -116,6 +116,11 @@ background-image: -webkit-gradient(
     color: #777777;
 }
 
+.corpo div 
+{
+    max-heigth: 250px;
+    overflow: scroll;
+}
 
 ::-webkit-scrollbar-track
 {
