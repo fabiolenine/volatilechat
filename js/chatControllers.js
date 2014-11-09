@@ -3,6 +3,11 @@ angular.module('chatControllers',[])
 
 .controller('chatCTRL', function($scope, socket) {
 
+  // Var
+  // ================
+
+  $scope.messages = [];
+
   // Socket listeners
   // ================
 
