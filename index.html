@@ -122,8 +122,8 @@
                       </ul>
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
-                          <ul>
-                            <li ng-repeat = "message in messages">
+                          <ul id="messages" class="chat">
+                            <li class="left clearfix" ng-repeat = "message in messages">
                               {{message.user}}: {{message.text}}
                             </li>
                           </ul>
@@ -135,7 +135,6 @@
                       <div class="input-group">
                         <input  type="text"
                                 class="form-control"
-                                placeholder="mensagem"
                                 ng-model="message">
                         <div class="input-group-btn">
                           <button type="button" class="btn btn-success" ng-click="sendMessage()">
