@@ -122,7 +122,11 @@
                       </ul>
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
-                        {{messages}}
+                          <ul>
+                            <li ng-repeat = "message in messages">
+                              {{message.user}}: {{message.text}}
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -131,9 +135,10 @@
                       <div class="input-group">
                         <input  type="text"
                                 class="form-control"
-                                placeholder="mensagem">
+                                placeholder="mensagem"
+                                ng-model="message">
                         <div class="input-group-btn">
-                          <button type="button" class="btn btn-success">
+                          <button type="button" class="btn btn-success" ng-click="sendMessage()">
                             <span class="glyphicon glyphicon-send"></span>
                             Enviar
                           </button>
