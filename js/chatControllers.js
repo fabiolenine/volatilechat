@@ -70,7 +70,7 @@ angular.module('chatControllers',[])
   // ==============================
 
   $scope.changeName = function () {
-    console.log('Função ativa e chegou o seguinte nome:' + newName);
+    console.log('Função ativa e chegou o seguinte nome:' + $scope.newName);
     socket.emit('change:name', {
       name: $scope.newName
     }, function (result) {
