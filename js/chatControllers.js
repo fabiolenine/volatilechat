@@ -1,7 +1,7 @@
 // ~/js/chatControllers.js
 angular.module('chatControllers',[])
 
-.controller('chatCTRL'), function($scope, socket) {
+.controller('chatCTRL', function($scope, socket) {
 
   // Socket listeners
   // ================
@@ -94,4 +94,4 @@ angular.module('chatControllers',[])
     // clear message box
     $scope.message = '';
   };
-}
+});
