@@ -94,7 +94,7 @@
                      <button class="btn btn-default"
                              type="button"
                              data-toggle="modal"
-                             data-target="#myModal">
+                             href="#myModal">
                         <span class="glyphicon glyphicon-plus"></span>
                         Entrar
                      </button>
@@ -116,7 +116,7 @@
           tabindex        ="-1"
           role            ="dialog"
           aria-labelledby ="myLargeModalLabel"
-          aria-hidden     ="false">
+          aria-hidden     ="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -389,6 +389,12 @@
   <script src="http://storage.googleapis.com/volatilestore/js/chatServices.js">             </script>
   <script src="http://storage.googleapis.com/volatilestore/js/chatControllers.js">          </script>
   <script src="http://storage.googleapis.com/volatilestore/js/chatCore.js">                 </script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('#myModal').modal('show');
+    });
+  </script>
 
 </body>
 </html>
