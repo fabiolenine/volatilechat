@@ -84,20 +84,17 @@
               <div class="col-xs-6 col-md-4"></div>
               <div class="col-xs-6 col-md-4">
                 <div class="input-group">
-                <input  type        ="text"
-                        class       ="form-control"
-                        placeholder ="nickname"
-                        maxlength   = "20"
-                        style       ="border:none"
-                        autofocus>
-                <span class="input-group-btn">
-                    <button class       ="btn btn-default"
-                            type        ="button"
-                            data-toggle ="modal"
-                            data-target ="#chatModal">Entrar
-                    </button>
-                </span>
-                <p class="help-block text-danger"></p>
+                  <input  type        ="text"
+                          class       ="form-control"
+                          placeholder ="nickname"
+                          ng-model    ="newName">
+                  <div class="input-group-btn">
+                     <button class       ="btn btn-default"
+                             type        ="button"
+                             data-toggle ="modal"
+                             data-target ="#chatModal">Entrar
+                     </button>
+                  </div>
                 </div>
               </div>
               <div class="col-xs-6 col-md-4"></div>
