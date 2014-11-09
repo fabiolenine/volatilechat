@@ -90,9 +90,10 @@
                 <div class="input-group">
                   <input  type="text"
                           class="form-control"
-                          placeholder="nickname">
+                          placeholder="nickname"
+                          ng-model="newName">
                   <div class="input-group-btn">
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="chanceName()">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Entrar
                     </button>
