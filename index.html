@@ -126,8 +126,9 @@
                             <ul>
                               <li class="left clearfix" ng-repeat = "message in messages">
                                 <div class="bubble">
-                                  <p style="color: black">{{message.user}}: {{message.text}}</p>
+                                  <p style="color: black">{{message.text}}</p>
                                 </div>
+                                {{message.user}}: 
                               </li>
                             </ul>
                         </div>
