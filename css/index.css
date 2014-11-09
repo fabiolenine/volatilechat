@@ -3,14 +3,15 @@
 
 .bubble {
 	background-image: linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
-background-image: -o-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
-background-image: -webkit-gradient(
+    background-image: -o-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+    background-image: -webkit-gradient(
 	linear,
 	left bottom,
 	left top,
+    color: black;
 	color-stop(0.25, rgb(210,244,254)),
 	color-stop(1, rgb(149,194,253))
 );
@@ -115,16 +116,6 @@ background-image: -webkit-gradient(
     color: #777777;
 }
 
-.panel .slidedown .glyphicon, .chat .glyphicon
-{
-    margin-right: 5px;
-}
-
-.panel-body
-{
-    overflow-y: scroll;
-    height: 250px;
-}
 
 ::-webkit-scrollbar-track
 {

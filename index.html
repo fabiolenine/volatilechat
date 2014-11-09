@@ -109,7 +109,7 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Volatile
+                      <h4 class="modal-title" id="myModalLabel" style="color: black">Volatile
                         <span class="fa fa-comments fa-2x"></span>
                         <i>
                           <h5> beta</h5>
@@ -123,9 +123,8 @@
                       </ul>
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
-
-                            <ul id="messages">
-                              <li class="left clearfix chat" ng-repeat = "message in messages">
+                            <ul>
+                              <li class="left clearfix" ng-repeat = "message in messages">
                                 <div class="bubble">
                                   {{message.user}}: {{message.text}}
                                 </div>
