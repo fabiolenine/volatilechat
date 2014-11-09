@@ -339,6 +339,7 @@
             <h4 class="modal-title" id="myModalLabel">Volatile
               <i class="fa fa-comments fa-2x"> <h5> beta</h5></i>
             </h4>
+            Nickname: {{newName}}
           </div>
           <div class="modal-body">
             <!-- Nav tabs -->
@@ -363,12 +364,10 @@
                       required    =""
                       data-validation-required-message="Por favor, digite uma mensagem."
                       autofocus
-                      ng-model    ="message"
-                      ng-submit   ="sendMessage()">
+                      ng-model    ="message">
               <span class="input-group-btn">
                   <button class     ="btn btn-success"
-                          type      ="button"
-                          ng-click  ="sendMessage()">Enviar
+                          type      ="button">Enviar
                   </button>
               </span>
               <p class="help-block text-danger"></p>
