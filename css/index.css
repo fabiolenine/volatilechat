@@ -93,7 +93,7 @@ background-image: -webkit-gradient(
 .corpo 
 {
     overflow: scroll;
-    overflow-x: hidden;
+    
     max-height: 400px;
     -webkit-overflow-scrolling: touch;
 }
@@ -109,6 +109,7 @@ div.myautoscroll
 
 div.myautoscroll:hover {
    overflow: auto;
+   overflow-x: hidden;
    padding-right: 1px;
 }
 
