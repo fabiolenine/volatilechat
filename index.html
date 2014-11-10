@@ -116,13 +116,13 @@
                         </i>
                       </h4>
                     </div>
-                    <div class="modal-body corpo">
+                    <div class="modal-body">
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Principal</a></li>
                       </ul>
                       <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active corpo" id="home">
+                        <div role="tabpanel" class="tab-pane fade in active corpo myautoscroll" id="home">
 
                                 <ul style="list-style-type:none">
                                   <li class="left clearfix" ng-repeat = "message in messages">
@@ -402,5 +402,13 @@
   <script src="http://storage.googleapis.com/volatilestore/js/chatControllers.js">          </script>
   <script src="http://storage.googleapis.com/volatilestore/js/chatCore.js">                 </script>
 
+<script>
+    window.setInterval(function() {
+  var elem = document.getElementById('home');
+  elem.scrollTop = elem.scrollHeight;
+}, 1000);
+</script>
+    
+    
 </body>
 </html>

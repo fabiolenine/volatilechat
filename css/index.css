@@ -85,7 +85,7 @@ background-image: -webkit-gradient(
 	right: -5px;
 }
 
-.modal-body .corpo
+.modal-body
 {
     max-height: 500px;
 }
@@ -94,4 +94,29 @@ background-image: -webkit-gradient(
 {
     overflow: scroll;
     overflow-x: hidden;
+    max-height: 400px;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.myautoscroll 
+{
+    height: 40ex;
+    width: 40em;
+    overflow: hidden;
+    border: 1px solid #444;
+    margin: 3em;
+}
+
+div.myautoscroll:hover {
+   overflow: auto;
+   padding-right: 1px;
+}
+
+div.myautoscroll p {
+   padding-right: 0;
+   background-color:#ff0;
+}
+
+div.myautoscroll:hover p {
+    padding-right: 0px;
 }
