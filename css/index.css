@@ -88,11 +88,10 @@ background-image: -webkit-gradient(
 .modal-body .corpo
 {
     max-height: 500px;
-    width: 500px;
 }
 
 .corpo 
 {
-    overflow: auto;
+    overflow: scroll;
     overflow-x: hidden;
 }
