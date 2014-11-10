@@ -123,16 +123,20 @@
                       </ul>
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
-                            <ul>
-                              <li class="left clearfix" ng-repeat = "message in messages">
-                                <div>
-                                    <a style="color: black">{{message.user}}</a>
-                                </div>
-                                <div class="bubble--alt">
-                                    <a style="color: black">{{message.text}}</a>
-                                </div>
-                              </li>
-                            </ul>
+                            <div class="container">
+                                <ul>
+                                  <li class="left clearfix" ng-repeat = "message in messages">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-4 col-sm-3">
+                                            <a style="color: black">{{message.user}}</a>
+                                        </div>
+                                        <div class="col-xs-12 col-md-8 col-sm-6 bubble bubble--alt">
+                                            <a style="color: black">{{message.text}}</a>
+                                        </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </div>
                         </div>
                       </div>
                     </div>
