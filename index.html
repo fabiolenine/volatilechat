@@ -125,10 +125,12 @@
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
                             <ul>
                               <li class="left clearfix" ng-repeat = "message in messages">
-                                <div class="bubble">
-                                  <p style="color: black">{{message.text}}</p>
+                                <div>
+                                    <a style="color: black">{{message.user}}</a>
                                 </div>
-                                {{message.user}}: 
+                                <div class="bubble--alt">
+                                    <a style="color: black">{{message.text}}</a>
+                                </div>
                               </li>
                             </ul>
                         </div>
