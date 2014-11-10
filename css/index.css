@@ -85,12 +85,6 @@ background-image: -webkit-gradient(
 	right: -5px;
 }
 
-.container {
-	padding: 40px 20px;
-	margin: 0 auto;
-	width: 500px;
-}
-
 .modal-body .corpo
 {
     max-height: 500px;
