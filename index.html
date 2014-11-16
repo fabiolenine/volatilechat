@@ -124,7 +124,12 @@
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane fade in active" id="home">
                           <div class="row">
-                            <div class="col-xs-12 col-md-8 col-sm-6 corpoM myautoscrollM">
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">
+                                Título: Sala de bate-papo Principal
+                              </div>
+                              <div class="panel-body corpoM myautoscrollM">
+
                                   <ul style="list-style-type:none">
                                     <li class="left clearfix" ng-repeat = "message in messages">
                                       <div ng-hide="message.user">
@@ -142,8 +147,11 @@
                                       </div>
                                     </li>
                                   </ul>
+
+                              </div>
                             </div>
-                            <div class="panel panel-info col-xs-6 col-md-4 col-sm-3 ">
+
+                            <div class="panel panel-info">
                               <div class="panel-heading">
                                 Usuários
                               </div>
