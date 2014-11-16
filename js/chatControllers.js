@@ -27,7 +27,7 @@ angular.module('chatControllers',[])
   socket.on('user:join', function (data) {
     $scope.messages.push({
       user: '',
-      text: 'O usuário ' + data.name + ' entrou no Volatile.'
+      text: 'O usuário ' + data.name + ', entrou no Volatile.'
     });
     $scope.users.push(data.name);
   });
@@ -36,7 +36,7 @@ angular.module('chatControllers',[])
   socket.on('user:left', function (data) {
     $scope.messages.push({
       user: '',
-      text: 'O usuário ' + data.name + ' saiu do Volatile.'
+      text: 'O usuário ' + data.name + ', saiu do Volatile.'
     });
     var i, user;
     for (i = 0; i < $scope.users.length; i++) {

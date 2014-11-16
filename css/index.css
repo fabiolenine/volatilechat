@@ -90,7 +90,7 @@ background-image: -webkit-gradient(
     max-height: 500px;
 }
 
-.corpo
+.corpoM
 {
     overflow: scroll;
 
@@ -98,7 +98,7 @@ background-image: -webkit-gradient(
     -webkit-overflow-scrolling: touch;
 }
 
-div.myautoscroll
+div.myautoscrollM
 {
     height: 400px;
     width: 650px;
@@ -107,20 +107,54 @@ div.myautoscroll
     margin: 0px;
 }
 
-div.myautoscroll:hover {
+div.myautoscrollM:hover {
    overflow: auto;
    overflow-x: hidden;
    padding-right: 1px;
 	 padding-left: 1px;
 }
 
-div.myautoscroll p {
+div.myautoscrollM p {
    padding-right: 0;
 	 padding-left: 0;
    background-color:#ff0;
 }
 
-div.myautoscroll:hover p {
+div.myautoscrollM:hover p {
     padding-right: 0px;
+		padding-left: 0px
+}
+
+.corpoU
+{
+		overflow: scroll;
+
+		max-height: 400px;
+}
+
+div.myautoscrollU
+{
+		height: 400px;
+		width: 100px;
+		overflow: hidden;
+		border: 1px solid #444;
+		margin: 0px;
+}
+
+div.myautoscrollU:hover {
+	overflow: auto;
+	overflow-x: hidden;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+div.myautoscrollU p {
+	padding-right: 0;
+	padding-left: 0;
+	background-color:#ff0;
+}
+
+div.myautoscrollU:hover p {
+		padding-right: 0px;
 		padding-left: 0px
 }
