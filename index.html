@@ -130,12 +130,12 @@
                                       <div ng-hide="message.user">
                                         <a style="color: black">{{message.text}}</a>
                                       </div>
-                                      <div ng-show="message.user=name">
+                                      <div ng-show="message.user==name">
                                         <div class="bubble bubble--alt">
                                           <a style="color: black">{{message.text}}</a>
                                         </div>
                                       </div>
-                                      <div ng-hide="message.user=name">
+                                      <div ng-hide="message.user==name">
                                         <div class="bubble">
                                             <a style="color: black">{{message.user}}: {{message.text}}</a>
                                         </div>
