@@ -5,7 +5,6 @@ angular.module('chatControllers',[])
 
   // Var
   // ================
-
   $scope.messages = [];
 
   // Socket listeners
@@ -73,6 +72,7 @@ angular.module('chatControllers',[])
   // ==============================
 
   $scope.changeName = function () {
+    console.log('Passei por aqui' + $scope.newName);
     socket.emit('change:name', {
       name: $scope.newName
     }, function (result) {
