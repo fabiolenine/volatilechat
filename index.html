@@ -126,16 +126,24 @@
 
                                 <ul style="list-style-type:none">
                                   <li class="left clearfix" ng-repeat = "message in messages">
-                                    <a style="color: black">dia da semana e hora aqui</a>
-                                    <div class="bubble bubble--alt">
+                                    <a style="color: black" ng-hide("message.user")>{{message.text}}</a>
+                                    <div class="bubble bubble--alt" ng-show("message.user")>
                                         <a style="color: black">{{message.text}}</a>
                                     </div>
-                                    <div class="bubble">
+                                    <div class="bubble" ng-show("message.user")>
                                         <a style="color: black">{{message.user}}: {{message.text}}</a>
                                     </div>
                                   </li>
                                 </ul>
 
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade in">
+                          <ul style="list-style-type:none">
+                            <li class="left clearfix" ng-repeat = "user in users">
+                              <a style="color: black">{{user}}</a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>

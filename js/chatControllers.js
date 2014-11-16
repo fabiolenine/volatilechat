@@ -26,8 +26,8 @@ angular.module('chatControllers',[])
 
   socket.on('user:join', function (data) {
     $scope.messages.push({
-      user: 'chatroom',
-      text: 'User ' + data.name + ' has joined.'
+      user: '',
+      text: 'O usuário ' + data.name + ' entrou no Volatile.'
     });
     $scope.users.push(data.name);
   });
@@ -35,8 +35,8 @@ angular.module('chatControllers',[])
   // add a message to the conversation when a user disconnects or leaves the room
   socket.on('user:left', function (data) {
     $scope.messages.push({
-      user: 'chatroom',
-      text: 'User ' + data.name + ' has left.'
+      user: '',
+      text: 'O usuário ' + data.name + ' saiu do Volatile.'
     });
     var i, user;
     for (i = 0; i < $scope.users.length; i++) {

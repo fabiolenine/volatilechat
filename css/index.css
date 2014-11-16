@@ -100,10 +100,10 @@ background-image: -webkit-gradient(
 
 div.myautoscroll
 {
-    height: 410px;
-    width: 750px;
+    height: 400px;
+    width: 650px;
     overflow: hidden;
-    border: 1px solid #444;
+    border: 0px solid #444;
     margin: 0px;
 }
 
