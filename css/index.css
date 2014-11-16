@@ -101,7 +101,7 @@ background-image: -webkit-gradient(
 div.myautoscrollM
 {
     height: 400px;
-    width: 650px;
+    width: 675px;
     overflow: hidden;
     border: 0px solid #444;
     margin: 0px;
@@ -128,16 +128,17 @@ div.myautoscrollM:hover p {
 .corpoU
 {
 		overflow: scroll;
-
 		max-height: 400px;
+		-webkit-overflow-scrolling: touch;
 }
 
 div.myautoscrollU
 {
+		text-align: left;
 		height: 400px;
-		width: 100px;
+		width: 200px;
 		overflow: hidden;
-		border: 1px solid #444;
+		border: 0px solid #444;
 		margin: 0px;
 }
 
