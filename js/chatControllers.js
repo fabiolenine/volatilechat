@@ -14,6 +14,7 @@ angular.module('chatControllers',[])
   socket.on('init', function (data) {
     $scope.name = data.name;
     $scope.users = data.users;
+    $scope.totalusers = data.users.length;
   });
 
   socket.on('send:message', function (message) {
@@ -30,6 +31,7 @@ angular.module('chatControllers',[])
       text: 'O usuário ' + data.name + ', entrou no Volatile.'
     });
     $scope.users.push(data.name);
+    $scope.totalusers = $scope.users.length;
   });
 
   // add a message to the conversation when a user disconnects or leaves the room
@@ -43,6 +45,7 @@ angular.module('chatControllers',[])
       user = $scope.users[i];
       if (user === data.name) {
         $scope.users.splice(i, 1);
+        $scope.totalusers = $scope.users.length;
         break;
       }
     }
@@ -61,8 +64,8 @@ angular.module('chatControllers',[])
     }
 
     $scope.messages.push({
-      user: 'chatroom',
-      text: 'User ' + oldName + ' is now known as ' + newName + '.'
+      user: '',
+      text: 'O usuário ' + oldName + ' agora se chama ' + newName + '.'
     });
   }
 
@@ -70,12 +73,11 @@ angular.module('chatControllers',[])
   // ==============================
 
   $scope.changeName = function () {
-    console.log('Função ativa e chegou o seguinte nome:' + $scope.newName);
     socket.emit('change:name', {
       name: $scope.newName
     }, function (result) {
       if (!result) {
-        alert('There was an error changing your name');
+        alert('O nickname está em uso, escolha outro.');
       } else {
 
         changeName($scope.name, $scope.newName);
