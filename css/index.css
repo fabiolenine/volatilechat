@@ -11,7 +11,7 @@
 	linear,
 	left bottom,
 	left top,
-    color: black;
+  color: black;
 	color-stop(0.25, rgb(210,244,254)),
 	color-stop(1, rgb(149,194,253))
 );
@@ -90,34 +90,37 @@ background-image: -webkit-gradient(
     max-height: 500px;
 }
 
-.corpo 
+.corpo
 {
     overflow: scroll;
-    
+
     max-height: 400px;
     -webkit-overflow-scrolling: touch;
 }
 
-div.myautoscroll 
+div.myautoscroll
 {
-    height: 40ex;
-    width: 40em;
+    height: 410px;
+    width: 750px;
     overflow: hidden;
     border: 1px solid #444;
-    margin: 3em;
+    margin: 0px;
 }
 
 div.myautoscroll:hover {
    overflow: auto;
    overflow-x: hidden;
    padding-right: 1px;
+	 padding-left: 1px;
 }
 
 div.myautoscroll p {
    padding-right: 0;
+	 padding-left: 0;
    background-color:#ff0;
 }
 
 div.myautoscroll:hover p {
     padding-right: 0px;
+		padding-left: 0px
 }
