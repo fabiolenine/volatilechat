@@ -135,7 +135,7 @@
                                           <a style="color: black">{{message.text}}</a>
                                         </div>
                                       </div>
-                                      <div ng-hide="message.user==name">
+                                      <div ng-hide="message.user==name || message.user==''">
                                         <div class="bubble">
                                             <a style="color: black">{{message.user}}: {{message.text}}</a>
                                         </div>
