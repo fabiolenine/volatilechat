@@ -73,7 +73,6 @@ module.exports = function (socket) {
 
   // validate a user's name change, and broadcast it on success
   socket.on('change:name', function (data, fn) {
-      console.log(data);
     if (userNames.claim(data.name)) {
       var oldName = name;
       userNames.free(oldName);

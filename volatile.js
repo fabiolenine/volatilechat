@@ -9,6 +9,6 @@ app.get('/', function(req, res){
 
 io.on('connection', socket);
 
-http.listen(3000, function(){
-  console.log('Ouvindo na porta *:3000');
+http.listen(80,3000, function(){
+  console.log('Ouvindo nas portas *: 80 e 3000');
 });
