@@ -130,16 +130,20 @@
                                       <div ng-hide="message.user">
                                         <a style="color: black">{{message.text}}</a>
                                       </div>
-                                      <div class="bubble bubble--alt" ng-show="message.user">
-                                        <a style="color: black">{{message.text}}</a>
+                                      <div ng-show="message.user">
+                                        <div class="bubble bubble--alt">
+                                          <a style="color: black">{{message.text}}</a>
+                                        </div>
                                       </div>
-                                      <div class="bubble" ng-show="message.user">
-                                          <a style="color: black">{{message.user}}: {{message.text}}</a>
+                                      <div ng-show="message.user">
+                                        <div class="bubble">
+                                            <a style="color: black">{{message.user}}: {{message.text}}</a>
+                                        </div>
                                       </div>
                                     </li>
                                   </ul>
                             </div>
-                            <div class="col-xs-6 col-md-4 col-sm-3">
+                            <div class="col-xs-6 col-md-4 col-sm-3 corpoU myautoscrollU">
                               <ul style="list-style-type:none">
                                 <li class="left clearfix" ng-repeat = "user in users">
                                   <a style="color: black">{{user}}</a>
