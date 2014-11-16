@@ -142,9 +142,11 @@
                     <div class="modal-footer">
                       <!-- Button trigger modal -->
                       <div class="input-group">
-                        <input  type="text"
-                                class="form-control"
-                                ng-model="message">
+                        <form ng-submit="sendMessage()">
+                          <input  type="text"
+                                  class="form-control"
+                                  ng-model="message">
+                        </form>
                         <div class="input-group-btn">
                           <button type="button" class="btn btn-success" ng-click="sendMessage()">
                             <span class="glyphicon glyphicon-send"></span>
