@@ -295,8 +295,30 @@
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
                         <li>
-                            <a href="" class="btn btn-default btn-lg" data-container="body" data-toggle="popover" data-placement="top" data-content="Bitcoin to: 12oRGqS86w1vWxpGn9UBhEyb8vG6aExo8L"><i class="fa fa-btc fa-fw"></i> <span class="network-name">bitcoin</span></a>
-                        </li>
+                            <div style="font-size:16px;margin:0 auto;width:300px"
+                                 class="blockchain-btn"
+                                 data-address="12oRGqS86w1vWxpGn9UBhEyb8vG6aExo8L"
+                                 data-shared="false">
+                              <div class="blockchain stage-begin">
+                                  <img src="https://blockchain.info//Resources/buttons/donate_64.png"/>
+                              </div>
+                              <div class="blockchain stage-loading" style="text-align:center">
+                                  <img src="https://blockchain.info//Resources/loading-large.gif"/>
+                              </div>
+                              <div class="blockchain stage-ready">
+                                  <p align="center">Doe, por favor, através do endereço Bitcoin: <b>[[address]]</b></p>
+                                  <p align="center" class="qr-code"></p>
+                              </div>
+                            <div class="blockchain stage-paid">
+                                 Doação de <b>[[value]] BTC</b> Recebido. Muito Obrigado.
+                            </div>
+                            <div class="blockchain stage-error">
+                                <font color="red">[[error]]</font>
+                            </div>
+                          </div>
+
+                            <!--<a href="" class="btn btn-default btn-lg"><i class="fa fa-btc fa-fw"></i> <span class="network-name">Bitcoin</span></a>
+                  -->      </li>
                         <li>
                             <a href="https://github.com/fabiolenine/volatilews" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
@@ -443,6 +465,9 @@
   <script src="http://storage.googleapis.com/volatilestore/js/chatServices.js">             </script>
   <script src="http://storage.googleapis.com/volatilestore/js/chatControllers.js">          </script>
   <script src="http://storage.googleapis.com/volatilestore/js/chatCore.js">                 </script>
+
+  <!-- Bitcoin -->
+  <script src="https://blockchain.info//Resources/wallet/pay-now-button.js">                </script>
 
 <script>
     window.setInterval(function() {
