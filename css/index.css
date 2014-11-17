@@ -110,8 +110,6 @@ div.myautoscrollM
 div.myautoscrollM:hover {
    overflow: auto;
    overflow-x: hidden;
-   padding-right: 1px;
-	 padding-left: 1px;
 }
 
 div.myautoscrollM p {
@@ -145,8 +143,6 @@ div.myautoscrollU
 div.myautoscrollU:hover {
 	overflow: auto;
 	overflow-x: hidden;
-	padding-right: 1px;
-	padding-left: 1px;
 }
 
 div.myautoscrollU p {
