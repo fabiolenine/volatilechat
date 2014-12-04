@@ -5,6 +5,7 @@ var socket  = require('./js/socket.js')
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+  console.log(req.headers["accept-language"]);
 });
 
 io.on('connection', socket);
